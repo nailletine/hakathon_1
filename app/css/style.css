@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  height: 100%;
+}
+.webcam{
+  width: 80%;
+  height: auto;
+  columns: 3 200px;
+}
+.title{
+  font-size: 1em;
+}
+.titre{
+  font-size: 4em;
+}

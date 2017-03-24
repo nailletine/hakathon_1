@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <script src="script-tags-for-development.js"></script>
+    <title>
+        <%= pkg.name %>
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="<%= css %>" media="all" />
+</head>
+
+<body>
+
+
+
+    <div ui-view='navbar'></div>
+    <div ui-view='content'></div>
+
+    <script type="text/javascript" src="<%= js %>"></script>
+</body>

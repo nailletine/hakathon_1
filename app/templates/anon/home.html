@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0; }
+      #map { height: 100%; }
+    </style>
+  </head>
+  <body>
+
+
+    <div map-lazy-load="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5tsNQCR8jYimQ4tigCAxjp7zh-hvtoEU">
+
+    <input type="checkbox" ng-model="draggable" /> Draggable
+  <ng-map id='webcam-map'zoom="3" center="41,-87">
+    <marker no-watcher="true"
+    ng-repeat="web in webCams.webcams"
+      draggable="{{draggable}}"
+      position="[{{web.location.latitude}}, {{web.location.longitude}}]"
+      title="pos: {{p}}"></marker>
+  </ng-map>
+  draggable: {{draggable}}
+
+
+  <div class="titre">
+    <h>webcam to travel</h>
+  </div>
+  <div class="webcam">
+      <div ng-repeat="web in webCams.webcams">
+          <div class="title">
+              {{web.title}}
+              {{web.location.latitude}}{{web.location.longitude}}
+
+
+              <a name="lkr-timelapse-player" data-id="{{web.id}}" data-play="day" href="//lookr.com/{{web.id}}" target="_blank">Cork Harbour › South-East: Spike Island</a>
+              <script async type="text/javascript" src="//api.lookr.com/embed/script/timelapse.js"></script>
+          </div>
+      </div>
+  </div>
